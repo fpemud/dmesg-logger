@@ -1,0 +1,9 @@
+[Unit]
+Description=Record kernel messages into /var/log/dmesg
+
+[Service]
+ExecStart=/usr/bin/dmesg -w
+StandardOutput=file:/var/log/dmesg
+
+[Install]
+WantedBy=multi-user.target
